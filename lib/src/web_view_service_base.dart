@@ -1,3 +1,5 @@
 class WebViewService {
-  List<String> whiteListedUrls = [];
+  final List<String> whiteListedUrls;
+
+  WebViewService({required this.whiteListedUrls});
 }
