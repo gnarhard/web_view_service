@@ -44,12 +44,13 @@ class _WebViewState extends State<WebView> {
         ),
       );
 
-    final bearerToken = widget.webViewConfig.getBearerTokenCallback();
-    if (bearerToken == null) {
+    if (widget.webViewConfig.bearerToken == null) {
       webviewController.loadRequest(Uri.parse(widget.webViewConfig.url));
     } else {
       webviewController.loadRequest(Uri.parse(widget.webViewConfig.url),
-          headers: bearerToken!);
+          headers: {
+            'Authorization': 'Bearer ${widget.webViewConfig.bearerToken}'
+          });
     }
   }
 
