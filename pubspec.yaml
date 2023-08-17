@@ -1,6 +1,6 @@
 name: web_view_service
 description: Service and widgets for managing web views in Flutter apps.
-version: 1.0.0
+version: 1.0.1
 
 environment:
   sdk: '>=2.18.6 <3.0.0'
